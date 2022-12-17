@@ -1,0 +1,208 @@
+@import "../settings/colors";
+@import "../settings/mixin";
+@import "base";
+
+
+.pricing {
+  background-color: $color-white;
+  width: 100vw;
+
+  text-align: center;
+  margin-top: 100px;
+  @include tablet {
+    margin: 50px auto;
+  }
+
+   h2 {
+     font-family: $font;
+     font-size: 36px;
+     line-height: 42px;
+     margin-bottom: 50px;
+   }
+    .pricing-boxes {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+       @include tablet {
+         flex-direction: column;
+       }
+
+      .pricing-box {
+        @include pricing-box;
+        border: 1px solid $color-redish;
+        margin-bottom: 197px;
+
+        h3 {
+          line-height: 24px;
+          font-size: 20px;
+          font-family: $font;
+          padding: 34px 160px 14px;
+        }
+
+        h4 {
+          line-height: 64px;
+          font-size: 46px;
+          font-family: $font-open-sans;
+          color: $color-redish;
+          margin-bottom: 69px;
+          font-weight: 300;
+        }
+
+        .pricing-list {
+          margin-bottom: 61px;
+
+          .pricing-item {
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-family: $font-open-sans;
+            line-height: 19px;
+            color: $color-black;
+          }
+
+          .pricing-item::before {
+            content: "";
+            @include pricing-item;
+          }
+
+          .pricing-item-not::before {
+            content: "";
+            @include close;
+          }
+        }
+
+        .button {
+          position: absolute;
+          bottom: -24px;
+          right: 110px;
+          padding: 16px 57px;
+          background-color: $color-redish;
+          border: none;
+          border-radius: 23px;
+
+          a {
+           @include btn-word;
+          }
+        }
+      }
+
+      .pricing-box-2 {
+        @include pricing-box;
+        margin-bottom: 179px;
+        border: 1px solid $color-primary;
+        transform: scale(1.05);
+
+        h3 {
+          font-size: 21px;
+          line-height: 25px;
+          font-weight: bold;
+          font-family: $font;
+          padding: 34px 141px 14px;
+        }
+
+        h4 {
+          font-weight: 300;
+          font-size: 46px;
+          line-height: 71px;
+          color: $color-primary;
+          font-family: $font-open-sans;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-family: $font;
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 14px;
+          color: #13253B;
+          margin-bottom: 61px;
+        }
+
+        .pricing-list {
+          margin-bottom: 54px;
+          .pricing-item {
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 19px;
+            font-family: $font-open-sans;
+
+          }
+
+          .pricing-item::before {
+            content: "";
+            @include pricing-item;
+          }
+
+          .pricing-item-not::before {
+            content: "";
+            @include close;
+          }
+        }
+        .button-2 {
+          position: absolute;
+          bottom: -24px;
+          right: 120px;
+          padding: 16px 64px;
+          background-color: $color-primary;
+          border: none;
+          border-radius: 23px;
+          a {
+            @include btn-word;
+          }
+        }
+      }
+      .pricing-box-3 {
+        @include pricing-box;
+        margin-bottom: 197px;
+        border: 1px solid $color-green;
+        h3 {
+            padding: 34px 143px 14px;
+            font-size: 20px;
+            line-height: 24px;
+            font-family: $font;
+        }
+        h4 {
+          font-family: $font-open-sans;
+          font-size: 46px;
+          line-height: 64px;
+          font-weight: 300;
+          color:$color-green;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 12px;
+          line-height: 14px;
+          font-family:$font;
+          font-weight: bold;
+          color: #13253B;
+          margin-bottom: 50px;
+        }
+        .pricing-list {
+          margin-bottom: 61px;
+          .pricing-item {
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 19px;
+            font-family: $font-open-sans;
+          }
+          .pricing-item::before{
+            content: "";
+            @include pricing-item;
+          }
+
+         }
+        .button-3{
+          position: absolute;
+          bottom: -24px;
+          right: 110px;
+          padding: 16px 57px;
+          background-color: $color-green;
+          border: none;
+          border-radius: 23px;
+
+          a{
+            @include btn-word;
+          }
+       }
+      }
+    }
+}

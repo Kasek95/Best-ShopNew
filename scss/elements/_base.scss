@@ -1,0 +1,25 @@
+@import "../settings/_mixin";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+.container {
+  width: 1352px;
+  margin: 0 auto;
+  @include notebook {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+ list-style: none;
+}
+

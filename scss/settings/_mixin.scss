@@ -1,0 +1,108 @@
+@import "colors";
+$spacing:5.96px;
+$padding: 19px;
+$font: "Raleway", sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
+@mixin notebook {
+  @media (max-width: 1352px) {
+    @content;
+  }
+}
+@mixin small-notebook {
+  @media (min-width: 1024px) and (max-width: 1252px){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 792px) {
+    @content;
+  }
+}
+@mixin icon-size {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+@mixin logo {
+  font-family: $font;
+  color: $color-primary;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin-left: 8.5rem;
+}
+
+@mixin span {
+  display: flex;
+  align-items: center;
+  color: $color-grey;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+
+@mixin btn-word {
+  color: $color-white;
+  font-family: $font-open-sans;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+@mixin pricing-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+}
+@mixin pricing-item {
+  width: 11px;
+  height: 11px;
+  background-image: url("../assets/Ckechmark-1.svg");
+  display: inline-block;
+  margin-right: 10px;
+}
+@mixin style {
+  display: flex;
+  justify-content: center;
+
+}
+@mixin close {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../assets/Close.svg");
+}
+@mixin circle {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+}
+@mixin center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@mixin tittle-h2{
+  letter-spacing: 5.96px;
+  font-family: $font;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+}
+@mixin paragraf {
+  font-size: 17px;
+  line-height: 20px;
+  color:$color-grey;
+  padding-top: $padding;
+}

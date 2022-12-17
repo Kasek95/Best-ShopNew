@@ -1,0 +1,132 @@
+$font: "Raleway", sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
+@import "../settings/_colors.scss";
+@import "../settings/mixin";
+@mixin mobile {
+  @media (max-width: 792px) {
+    @content;
+  }
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    box-shadow: 0px 3px 6px #00000029;
+
+    .logo {
+      @include logo;
+
+      @include mobile {
+        margin-left: 1.5rem;
+      }
+    }
+
+
+    .nav-li {
+      display: flex;
+      gap: 4rem;
+      margin-right: 8.5rem;
+      text-transform: uppercase;
+      font-family: $font-open-sans;
+      line-height: 0.93rem;
+      font-weight: bold;
+      font-size: 0.68rem;
+
+      @include mobile {
+        display: block;
+      }
+      li {
+          @include mobile {
+            width: 100%;
+          }
+        }
+    }
+    .menu-cont {
+      @include mobile {
+        position: absolute;
+        padding-left: 25px;
+        padding-top: 40px;
+        padding-bottom: 19.65px;
+        left: 0;
+        top: 71px;
+        WIDTH: 100VW;
+        box-shadow: 0px 3px 6px #00000029;
+      }
+    }
+    .nav-li a {
+      color: $color-grey;
+      letter-spacing: 0.20rem;
+      padding-bottom: 1.43rem;
+      padding-right: 0.93rem;
+      padding-left: 0.93rem;
+    }
+    .nav-li li {
+      @include mobile {
+        padding-bottom: 14px;
+      }
+    }
+    .nav-li  a:hover {
+      color: $color-black;
+      font-weight: 800;
+      border-bottom: 4px solid $color-primary;
+      letter-spacing: 0.20rem;
+      padding-bottom: 1.43rem;
+      padding-right: 0.93rem;
+      padding-left: 0.93rem;
+
+     @include mobile {
+       border: none;
+       padding-bottom: 0;
+     }
+    }
+  }
+
+
+    .toggler {
+      display: none;
+      @include mobile {
+        position: absolute;
+        right:50px;
+        display: block;
+        color: $color-primary;
+        font-size: 2rem;
+        border: none;
+        background: none;
+      }
+    }
+    #check {
+      display: none;
+    }
+
+    #check:not(:checked) ~ .menu-cont {
+      @include mobile {
+        display: none;
+      }
+    }
+    #check:checked ~ .close {
+      @include mobile {
+        display: block;
+      }
+    }
+  #check:checked ~ .open {
+    @include mobile {
+      display: none;
+    }
+  }
+  #check:not(:checked) ~ .close {
+    @include mobile {
+      display: none;
+    }
+  }
+  #check:not(:checked) ~ .open {
+    @include mobile {
+      display: block;
+    }
+  }
+}
+

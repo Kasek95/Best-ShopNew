@@ -1,0 +1,124 @@
+@import "base";
+@import "../settings/colors";
+@import "../settings/mixin";
+
+
+.statistic {
+   width: 100vw;
+
+    background-color: $color-white;
+  .main-1 {
+    text-align: center;
+    font-family: $font;
+    font-size: 2.25rem;
+    line-height: 3.5625rem;
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
+    @include mobile {
+      margin-top: 13px;
+      margin-bottom: 25px;
+    }
+  }
+
+    .main-boxes {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 121px;
+      @include mobile {
+        display: block;
+        margin-bottom: 53px;
+      }
+      .statistic-box {
+        @include center;
+       h2 {
+        @include tittle-h2;
+       }
+        p {
+         @include paragraf;
+        }
+        .circle {
+          margin-bottom: 14.18px;
+          background-color: $color-redish;
+          @include circle;
+        }
+        .circle::before {
+          content: "";
+          background-image: url("../assets/Person.svg");
+          background-repeat: no-repeat;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top:15px;
+          @include mobile {
+            top:7px;
+          }
+
+        }
+       @include mobile {
+         margin-top: 25px;
+       }
+      }
+
+        .statistic-box2 {
+          @include center;
+          h2 {
+            @include tittle-h2;
+          }
+          p{
+            @include paragraf;
+          }
+        .circle2 {
+          @include circle;
+          margin-bottom: 13px;
+          background-color: $color-primary;
+        }
+        .circle2::before {
+          content: "";
+          position: absolute;
+          background-image: url("../assets/Eye.svg");
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          top:15px;
+
+
+          }
+        }
+      @include mobile {
+        margin-top: 25px;
+      }
+        }
+      .statistic-box3 {
+        @include center;
+        h2{
+          @include tittle-h2;
+        }
+        p {
+          @include paragraf;
+        }
+      .circle3 {
+        margin-bottom: 14.22px;
+       @include circle;
+        background-color: $color-green;
+      }
+       .circle3::before {
+         content: "";
+         position: absolute;
+         background-image: url("../assets/Catalog.svg");
+         width: 100%;
+         height: 100%;
+         background-repeat: no-repeat;
+         top: 8px;
+
+
+       }
+      @include mobile {
+        margin-top: 25px;
+      }
+      }
+    }
+
+
+
+
+
