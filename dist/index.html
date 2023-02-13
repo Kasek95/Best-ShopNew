@@ -34,7 +34,7 @@
           </div>
        </nav>
    </div>
-
+</header>
     <section class="opening">
         <div class="opening__content">
             <h1 class="opening__header">Sell More!</h1>
@@ -133,8 +133,10 @@
         <article class="pricing-boxes container">
 
             <div class="pricing-box">
-                <h3>Basic</h3>
-                <h4>$0</h4>
+               <div class="pricing-box-tittle">
+                    <h3>Basic</h3>
+                    <h4>$0</h4>
+               </div>
                 <ul class="pricing-list">
                     <li class="pricing-item">100MB HD</li>
                     <li class="pricing-item">Subdomain</li>
@@ -176,6 +178,82 @@
         </article>
 
     </section>
+
+<section class="calc">
+    <h2>Calculate how much you’ll pay</h2>
+
+    <div class="calc-columns">
+        <form class="calc-form">
+            <div class="calc-input">
+                <input type="number" class="form-input" id="products" min="1" step="1" placeholder="Products quantity">
+            </div>
+            <div class="calc-input">
+                <input type="number" class="form-input" id="orders" min="1" step="1" placeholder="Estimated orders in month">
+            </div>
+            <div class="calc-select" id="package" data-value="">
+                <div class="select-input">
+                    Choose package
+                    <i class="fa-solid arrow fa-arrow-down"></i>
+                </div>
+
+                <ul id="packageDropDown" class="select-dropdown show">
+                    <li class="basic" data-package="basic">Basic</li>
+                    <li class="professional" data-package="professional">Professional</li>
+                    <li class="premium" data-package="premium">Premium</li>
+                </ul>
+            </div>
+            <label class="form-checkbox">
+                <input type="checkbox" id="accounting">
+                <span class="checkbox"></span>
+                <p class="consent-text">Accounting</p>
+            </label>
+            <label class="form-checkbox">
+                <input type="checkbox" id="terminal">
+                <span class="checkbox"></span>
+                <p class="consent-text">Rental of a payment terminal</p>
+            </label>
+        </form>
+
+        <div class="calc-summary">
+            <ul>
+
+                    <li class="list-item" data-id="products">
+                        <span class="item-type">Products</span>
+                        <span class="item-calc">20 * $0.5</span>
+                        <span class="item-price">$10</span>
+                    </li>
+
+
+                    <li class="list-item" data-id="orders">
+                        <span class="item-type">Orders</span>
+                        <span class="item0calc">20 * $0.5</span>
+                        <span class="item-price">$10</span>
+                    </li>
+
+                <li class="list-item" data-id="package">
+                    <span class="item-type">Package</span>
+                    <span class="item-calc">Premium</span>
+                    <span class="item-price">$10</span>
+                </li>
+
+                <li class="list-item" data-id="accounting">
+                    <span class="item-type">Accounting</span>
+                    <span class="item-price">$10</span>
+                </li>
+
+                
+                <li class="list-item" data-id="terminal">
+                    <span class="item-type">Terminal</span>
+                    <span class="item-price">$10</span>
+                </li>
+            </ul>
+            <div class="summary-total" id="total-price">
+                <span>Total</span>
+                <span class="total-price">$700</span>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section class="contact container">
 
@@ -227,6 +305,8 @@
     </footer>
 
 
-</header>
+
+
+<script src="/index.672d4772.js"></script>
 <script src="/Best-ShopNew.3464ddca.js"></script></body>
 </html>

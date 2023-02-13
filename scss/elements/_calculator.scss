@@ -1,0 +1,203 @@
+@import "../settings/colors";
+@import "base";
+@import "../settings/mixin";
+
+
+.calc {
+  padding: 80px 0px;
+  background-color: $color-light-grey;
+    h2 {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .calc-columns {
+      width: 849px;
+      margin: 0px auto;
+      display: flex;
+      justify-content: space-evenly;
+
+      .calc-form {
+        width: 50%;
+          .calc-input {
+            font-family: 'Open Sans', sans-serif;
+            .form-input {
+              height: 40px;
+              width: 100%;
+              background-color: $color-white;
+              border-radius: 6px;
+              border: 1px solid $color-primary;
+              margin-bottom: 20px;
+              box-shadow: 0px 3px 6px #08A6E429;
+              font-size: 13px;
+              line-height: 18px;
+              color: $color-grey;
+              padding-left: 20px;
+              cursor: pointer;
+            }
+          }
+        .calc-select {
+          width: 100%;
+
+            .select-input {
+              display: flex;
+              color: $color-grey;
+              justify-content: space-between;
+              align-items: center;
+              height: 40px;
+              border: 1px solid $color-primary;
+              box-shadow: 0px 3px 6px #08A6E429;
+              background-color: $color-white;
+              border-radius: 6px;
+              padding-left: 20px;
+               .fa-solid {
+                 display: flex;
+                 justify-content: center;
+                 margin-right: 20px;
+                 color:$color-primary;
+                 align-items: center;
+                 height: 22px;
+                 width: 22px;
+                 border: 1px solid $color-primary;
+                 border-radius: 50%;
+               }
+            }
+           .select-dropdown {
+             display: none;
+             font-family: 'Open Sans', sans-serif;
+             margin-top: 10px;
+             width: 100%;
+             background-color: $color-white;
+             border: 1px solid $color-redish;
+             box-shadow: 0px 3px 6px #EB476E29;
+             border-radius: 6px;
+             cursor: pointer;
+              li:first-of-type {
+                font-size: 13px;
+                line-height: 18px;
+                padding-left: 20px;
+                padding-top: 11px;
+              }
+             li:nth-of-type(2) {
+               font-size: 13px;
+               line-height: 18px;
+               padding-left: 20px;
+               padding-top: 15px;
+               padding-bottom: 15px;
+
+             }
+             li:nth-of-type(3) {
+               font-size: 13px;
+               line-height: 18px;
+               padding-left: 20px;
+               padding-bottom: 11px;
+
+             }
+           }
+          .show {
+            display: block;
+          }
+        }
+        .form-checkbox {
+          display: flex;
+          align-items: center;
+          margin-top: 24px;
+           input {
+             height: 24px;
+             width: 24px;
+             border: 1px solid $color-grey;
+             border-radius: 6px;
+           }
+          .checkbox:checked::after {
+            content: "";
+            background-image: url("../assets/Checkmark.svg");
+            width: 12px;
+            height: 11px;
+
+          }
+          .consent-text {
+            padding-left: 10px;
+            font-size: 12px;
+            font-family: 'Open Sans', sans-serif;
+            color:$color-grey;
+          }
+        }
+      }
+      .calc-summary {
+        display: block;
+        width: 50%;
+        margin-left: 47px;
+
+
+          .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 31px;
+            margin-bottom: 8px;
+            background: #55DFB4;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 6px;
+            color: $color-white;
+            font-size: 14px;
+            line-height: 19px;
+
+            }
+            .item-type {
+              padding-left: 20px;
+            }
+
+            .item-price {
+              padding-right: 20px;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 24px;
+            }
+            li:first-of-type {
+              visibility: hidden;
+            }
+            li:nth-of-type(2) {
+              visibility: hidden;
+            }
+            li:nth-of-type(3) {
+              visibility: hidden;
+            }
+            li:nth-of-type(4) {
+              visibility: hidden;
+            }
+           li:nth-of-type(5){
+             visibility: hidden;
+           }
+      }
+
+        }
+
+
+
+
+        .summary-total {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          font-size: 14px;
+          font-family: 'Open Sans', sans-serif;
+          margin-top: 28px;
+          height: 38px;
+          width: 179px;
+          background-color: $color-primary;
+          color: $color-white;
+          box-shadow: 0px 3px 6px #00000029;
+          border-radius: 6px;
+          margin-left: 245px;
+          visibility: hidden;
+           .total-price {
+             font-weight: bold;
+             font-size: 20px;
+             line-height: 27px;
+           }
+        }
+      }
+
+
+
